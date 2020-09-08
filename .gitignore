@@ -1,6 +1,6 @@
 /node_modules/
 /public/build/
-./firebase/
+.firebase/
 
 .DS_Store
 *.cache
