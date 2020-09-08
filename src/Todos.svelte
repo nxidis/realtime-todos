@@ -4,6 +4,9 @@
     import { collectionData } from 'rxfire/firestore';
     import { startWith } from 'rxjs/operators';
 
+    import { Button } from 'sveltestrap';
+
+
     // User ID passed from parent
     export let uid;
 
@@ -47,4 +50,4 @@
 
 <input bind:value={text}>
 
-<button on:click={add}>Add Task</button>
+<Button on:click={add}> Add Task</Button>
