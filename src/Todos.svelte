@@ -5,6 +5,7 @@
     import { startWith } from 'rxjs/operators';
 
     import { Button } from 'sveltestrap';
+    import { Form, FormGroup, FormText, Input, Label } from 'sveltestrap';
 
 
     // User ID passed from parent
@@ -34,10 +35,6 @@
     }
 </script>
 
-<style>
-    input { display: block }
-</style>
-
 <ul>
     <h1>There are {$todos.length} to do items in the list</h1>
 	{#each $todos as todo}
@@ -47,7 +44,8 @@
 	{/each}
 </ul>
 
-
-<input bind:value={text}>
-
+<FormGroup>
+    <Label>Todo Title</Label>
+    <Input type="text" bind:value={text}></Input>
+</FormGroup>
 <Button on:click={add}> Add Task</Button>
