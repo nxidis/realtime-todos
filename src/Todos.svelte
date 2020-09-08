@@ -36,6 +36,7 @@
 </style>
 
 <ul>
+    <h1>There are {$todos.length} to do items in the list</h1>
 	{#each $todos as todo}
 
         <TodoItem {...todo} on:remove={removeItem} on:toggle={updateStatus} />
