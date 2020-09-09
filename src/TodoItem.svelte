@@ -2,6 +2,9 @@
 
     import { createEventDispatcher } from 'svelte';
 
+    import { Button } from 'sveltestrap';
+    import { Col, Container, Row } from 'sveltestrap';
+
     const dispatch = createEventDispatcher();
     
     function remove() {
@@ -30,16 +33,23 @@
 </style>
 
 
-<li>
-
-{#if complete}
-    <span class="is-complete">{ text }</span>
-    <button on:click={toggleStatus}> ✔️ </button>
-{:else}
-    <span>{ text }</span>
-    <button on:click={toggleStatus}> ❌ </button>
-{/if}
-
-<button on:click={remove}> 🗑 </button>
-
-</li>
+    <Row>
+        {#if complete}
+        <Col align="left">
+            <Button color="light" on:click={toggleStatus}> <span class="oi oi-circle-x"></span> </Button>
+        </Col>
+        <Col sm="8">
+            <span class="is-complete">{ text }</span>
+        </Col>
+        {:else}
+        <Col align="left">
+            <Button color="light" on:click={toggleStatus}> <span class="oi oi-circle-check"></span> </Button>
+        </Col>
+        <Col sm="8">
+            <span >{ text }</span>
+        </Col>
+        {/if}
+        <Col align="right">
+        <Button color="light" on:click={remove}> <span class="oi oi-trash"></span> </Button>
+        </Col>
+    </Row>

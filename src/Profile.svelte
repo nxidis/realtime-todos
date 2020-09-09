@@ -1,4 +1,6 @@
 <script>
+    import { Col, Container, Row } from 'sveltestrap';
+    
     export let displayName;
     export let photoURL;
     export let uid;

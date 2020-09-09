@@ -6,6 +6,9 @@
 
     import { Button } from 'sveltestrap';
     import { Form, FormGroup, FormText, Input, Label } from 'sveltestrap';
+    import { Card, CardBody, CardHeader } from 'sveltestrap';
+
+    import { Col, Container, Row } from 'sveltestrap';
 
 
     // User ID passed from parent
@@ -35,14 +38,18 @@
     }
 </script>
 
-<ul>
-    <h1>There are {$todos.length} to do items in the list</h1>
-	{#each $todos as todo}
-
-        <TodoItem {...todo} on:remove={removeItem} on:toggle={updateStatus} />
-        
+<Card>
+    <CardHeader>
+        <h1>{$todos.length} Todo items</h1>
+    </CardHeader>
+    {#each $todos as todo}
+    <Card>
+        <CardBody color="light">
+            <TodoItem {...todo} on:remove={removeItem} on:toggle={updateStatus} />
+        </CardBody>
+    </Card>
 	{/each}
-</ul>
+</Card>
 
 <FormGroup>
     <Label>Todo Title</Label>
