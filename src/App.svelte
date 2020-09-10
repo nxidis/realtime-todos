@@ -6,21 +6,21 @@
     import { authState } from 'rxfire/auth';
 
     import { Col, Container, Row } from 'sveltestrap';
-    import {Button} from 'sveltestrap';
+    import { Button } from 'sveltestrap';
 
     import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem
-  } from 'sveltestrap';
+        Collapse,
+        Navbar,
+        NavbarToggler,
+        NavbarBrand,
+        Nav,
+        NavItem,
+        NavLink,
+        UncontrolledDropdown,
+        DropdownToggle,
+        DropdownMenu,
+        DropdownItem
+    } from 'sveltestrap';
 
     let user;
 

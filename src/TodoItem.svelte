@@ -35,17 +35,17 @@
 
     <Row>
         {#if complete}
-        <Col align="left">
+        <Col xs align="left">
             <Button color="success" on:click={toggleStatus}> <span class="oi oi-circle-x"></span> </Button>
         </Col>
-        <Col sm="8">
+        <Col sm="7">
             <span class="is-complete">{ text }</span>
         </Col>
         {:else}
-        <Col align="left">
+        <Col xs align="left">
             <Button color="primary" on:click={toggleStatus}> <span class="oi oi-circle-check"></span> </Button>
         </Col>
-        <Col sm="8">
+        <Col sm="7">
             <span >{ text }</span>
         </Col>
         {/if}
