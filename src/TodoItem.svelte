@@ -30,20 +30,31 @@
         text-decoration: line-through;
         color: green;
     }
+    ion-icon {
+        font-size: 32px;
+    }
 </style>
 
 
     <Row>
         {#if complete}
             <Col xs align="left">
-                <Button color="success" on:click={toggleStatus}> <span class="oi oi-circle-x"></span> </Button>
+                <Button color="success" on:click={toggleStatus}> 
+                    <svg class="bi" width="16" height="16" fill="currentColor">
+                        <use xlink:href="bootstrap-icons.svg#check-square"/>
+                    </svg> 
+                </Button>
             </Col>
             <Col sm="7">
                 <span class="is-complete">{ text }</span>
             </Col>
         {:else}
             <Col xs align="left">
-                <Button color="primary" on:click={toggleStatus}> <span class="oi oi-circle-check"></span> </Button>
+                <Button color="primary" on:click={toggleStatus}> 
+                    <svg class="bi" width="16" height="16" fill="currentColor">
+                        <use xlink:href="bootstrap-icons.svg#square"/>
+                    </svg> 
+                </Button>
             </Col>
             <Col sm="7">
                 <span >{ text }</span>

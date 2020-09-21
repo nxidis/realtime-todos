@@ -33,14 +33,15 @@
 
 <svelte:head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
 </svelte:head>
 
 
     <Container>
             <Navbar>
                 <NavbarBrand>
-                    <span class="oi oi-list" ></span>
+                    <svg class="bi" width="32" height="32" fill="currentColor">
+                        <use xlink:href="bootstrap-icons.svg#list"/>
+                    </svg>
                     Realtime Todos
                 </NavbarBrand>
                 
@@ -60,7 +61,7 @@
                 <Col md="8">
                     <Todos uid={user.uid} />
                 </Col>
-                <Col xs="1"></Col>
+                <Col xs="2"></Col>
             {:else}
                 <Col xs="2"></Col>
                 <Col md="8">
