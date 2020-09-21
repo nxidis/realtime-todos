@@ -30,9 +30,7 @@
         text-decoration: line-through;
         color: green;
     }
-    ion-icon {
-        font-size: 32px;
-    }
+
 </style>
 
 
