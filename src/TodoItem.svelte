@@ -59,6 +59,10 @@
             </Col>
         {/if}
             <Col xs align="right">
-            <Button color="light" on:click={remove}> <span class="oi oi-trash"></span> </Button>
+            <Button color="light" on:click={remove}> 
+                <svg class="bi" width="16" height="16" fill="currentColor">
+                    <use xlink:href="bootstrap-icons.svg#trash"/>
+                </svg> 
+             </Button>
             </Col>
     </Row>
