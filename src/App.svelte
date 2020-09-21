@@ -40,7 +40,7 @@
             <Navbar>
                 <NavbarBrand>
                     <svg class="bi" width="32" height="32" fill="currentColor">
-                        <use xlink:href="bootstrap-icons.svg#list"/>
+                        <use xlink:href="bootstrap-icons.svg#list-check"/>
                     </svg>
                     Realtime Todos
                 </NavbarBrand>
